@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:wecan_task/controller/controllers/dream_details_controller.dart';
 import 'package:wecan_task/utils/utils.dart';
@@ -60,17 +61,11 @@ class DreamDetailsScreen extends StatelessWidget {
                                       mainAxisAlignment: MainAxisAlignment.end,
                                       crossAxisAlignment: CrossAxisAlignment.start,
                                       children: [
-                                        Image.asset(
-                                          'assets/logo.png',
-                                          width: Utils.phoneSize(
-                                            99,
-                                            height: false,
-                                          ),
-                                          height: Utils.phoneSize(
-                                            106,
-                                            height: true,
-                                          ),
+                                        SvgPicture.asset('assets/logo.svg',width: Utils.phoneSize(
+                                          99,
+                                          height: false,
                                         ),
+                                          height: 106,),
                                       ],
                                     ),
                                   ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
 import 'package:wecan_task/controller/bindings/dream_details_binding.dart';
 import 'package:wecan_task/controller/controllers/special_dreams_controller.dart';
@@ -18,15 +19,41 @@ class SpecialDreams extends StatelessWidget {
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(
-          Utils.phoneSize(
-            60,
-            height: true,
-          ),
+          150,
         ),
-        child: SizedBox(
-          height: Utils.phoneSize(
-            60,
-            height: true,
+        child: Padding(
+          padding: const EdgeInsets.only(top: 40.0, left: 20, right: 20),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SvgPicture.asset('assets/menu.svg',width: Utils.phoneSize(
+                29,
+                height: false,
+              ),
+                height: 29,),
+              // Image.asset(
+              //   'assets/menu.png',
+              //   width: Utils.phoneSize(
+              //     29,
+              //     height: false,
+              //   ),
+              //   height: 29,
+              // ),
+              SvgPicture.asset('assets/logo.svg',width: Utils.phoneSize(
+                99,
+                height: false,
+              ),
+                height: 106,),
+              // Image.asset(
+              //   'assets/logo.png',
+              //   width: Utils.phoneSize(
+              //     99,
+              //     height: false,
+              //   ),
+              //   height: 106,
+              // ),
+            ],
           ),
         ),
       ),
@@ -49,40 +76,6 @@ class SpecialDreams extends StatelessWidget {
             ),
             Column(
               children: [
-                SizedBox(
-                  height: Utils.phoneSize(
-                    106,
-                    height: true,
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.asset(
-                        'assets/menu.png',
-                        width: Utils.phoneSize(
-                          29,
-                          height: false,
-                        ),
-                        height: Utils.phoneSize(
-                          29,
-                          height: true,
-                        ),
-                      ),
-                      Image.asset(
-                        'assets/logo.png',
-                        width: Utils.phoneSize(
-                          99,
-                          height: false,
-                        ),
-                        height: Utils.phoneSize(
-                          106,
-                          height: true,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
                 SizedBox(
                   height: Utils.phoneSize(
                     30,
